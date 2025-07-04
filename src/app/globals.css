@@ -41,17 +41,30 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Facebook Marketplace Colors */
+  --color-facebook-blue: #1877F2;
+  --color-facebook-blue-dark: #166FE5;
+  --color-facebook-blue-light: #E7F3FF;
+  --color-facebook-green: #42B883;
+  --color-facebook-gray-50: #F7F8FA;
+  --color-facebook-gray-100: #E4E6EA;
+  --color-facebook-gray-200: #CCD0D5;
+  --color-facebook-gray-300: #BCC0C4;
+  --color-facebook-gray-500: #8A8D91;
+  --color-facebook-gray-700: #606770;
+  --color-facebook-gray-900: #1C1E21;
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.147 0.004 49.25);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.147 0.004 49.25);
-  --primary: oklch(0.216 0.006 56.043);
+  --primary: #1877F2;
   --primary-foreground: oklch(0.985 0.001 106.423);
   --secondary: oklch(0.97 0.001 106.424);
   --secondary-foreground: oklch(0.216 0.006 56.043);
@@ -62,7 +75,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.923 0.003 48.717);
   --input: oklch(0.923 0.003 48.717);
-  --ring: oklch(0.709 0.01 56.259);
+  --ring: #1877F2;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -76,6 +89,19 @@
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+  
+  /* Facebook Colors */
+  --facebook-blue: #1877F2;
+  --facebook-blue-dark: #166FE5;
+  --facebook-blue-light: #E7F3FF;
+  --facebook-green: #42B883;
+  --facebook-gray-50: #F7F8FA;
+  --facebook-gray-100: #E4E6EA;
+  --facebook-gray-200: #CCD0D5;
+  --facebook-gray-300: #BCC0C4;
+  --facebook-gray-500: #8A8D91;
+  --facebook-gray-700: #606770;
+  --facebook-gray-900: #1C1E21;
 }
 
 .dark {
@@ -85,7 +111,7 @@
   --card-foreground: oklch(0.985 0.001 106.423);
   --popover: oklch(0.216 0.006 56.043);
   --popover-foreground: oklch(0.985 0.001 106.423);
-  --primary: oklch(0.923 0.003 48.717);
+  --primary: #1877F2;
   --primary-foreground: oklch(0.216 0.006 56.043);
   --secondary: oklch(0.268 0.007 34.298);
   --secondary-foreground: oklch(0.985 0.001 106.423);
@@ -96,7 +122,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.553 0.013 58.071);
+  --ring: #1877F2;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -119,4 +145,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Facebook Marketplace specific utilities */
+.facebook-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow;
+}
+
+.facebook-button-primary {
+  @apply bg-facebook-blue hover:bg-facebook-blue-dark text-white font-medium rounded-lg px-4 py-2 transition-colors;
+}
+
+.facebook-button-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg px-4 py-2 transition-colors;
+}
+
+.facebook-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800;
 }
